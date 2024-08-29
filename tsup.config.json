@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/tsup/schema.json",
+  "entry": [
+    "src/index.ts"
+  ],
+  "clean": true,
+  "dts": false,
+  "format": [
+    "cjs"
+  ],
+  "sourcemap": false,
+  "splitting": false,
+  "treeshake": true
+}

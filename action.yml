@@ -1,0 +1,26 @@
+name: "GitHub IssueOps Approvals"
+description: "Require additional approval on pull requests if iam changes are detected"
+author: "Nikita.Burtsev@mckesson.com"
+branding:
+  icon: "check-square"
+  color: "red"
+inputs:
+  repo-token:
+    description: "GITHUB_TOKEN"
+    required: true
+  approvers:
+    description: "Team slug to request approval, must have write permissions to repository"
+    required: true
+  appId:
+    description: "GitHub App ID"
+    required: true
+  privateKey:
+    description: "GitHub App Private Key"
+    required: true
+  planPath:
+    description: "Path to plan file"
+    required: false
+    default: "tfplan.json"
+runs:
+  using: "node20"
+  main: "dist/index.js"
